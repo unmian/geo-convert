@@ -1,6 +1,6 @@
 {
-  "name": "@quarter/geo-convert",
-  "version": "0.1.0",
+  "name": "@unmian/geo-convert",
+  "version": "0.1.1",
   "author": {
     "name": "Quarter",
     "email": "master@shiruihua.cn"
@@ -31,25 +31,17 @@
   "homepage": "https://github.com/unmian/geo-convert",
   "bugs": "https://github.com/unmian/geo-convert/issues",
   "scripts": {
-    "init": "node ./scripts/init",
-    "dev": "vite --config ./build/base.config.ts",
-    "build": "vite build --config ./build/lib.config.ts",
-    "update:deps": "node ./scripts/update.deps",
-    "release:stage": "node ./scripts/release.stage",
-    "release:patch": "node ./scripts/release.release patch",
-    "release:minor": "node ./scripts/release.release minor",
-    "release:major": "node ./scripts/release.release major",
-    "publish:private": "yarn run build && npm publish --registry https://npm.lescity.com.cn/",
-    "unpublish:private": "npm unpublish --force --registry https://npm.lescity.com.cn/"
+    "prepare": "husky install",
+    "dev": "vitest dev",
+    "prepublishOnly": "vite build",
+    "publish:private": "pnpm publish --no-git-checks --registry https://npm.lescity.com.cn",
+    "unpublish:private": "pnpm unpublish  --force --registry https://npm.lescity.com.cn"
   },
   "devDependencies": {
     "@types/node": "^17.0.31",
     "typescript": "^4.6.4",
     "vite": "^2.9.8",
-    "vite-plugin-dts": "^1.1.1"
-  },
-  "dependencies": {
-    "vue": "2.6.14",
-    "vue-class-component": "^7.2.6"
+    "vite-plugin-dts": "^1.1.1",
+    "vitest": "^0.29.2"
   }
 }

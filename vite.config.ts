@@ -1,22 +1,26 @@
 /*
  * @Author: Quarter
  * @Date: 2021-12-29 07:29:06
- * @LastEditTime: 2022-05-10 10:58:16
+ * @LastEditTime: 2023-03-02 07:28:21
  * @LastEditors: Quarter
  * @Description: vite 组件库配置
- * @FilePath: /geo-convert/build/lib.config.ts
+ * @FilePath: /geo-convert/vite.config.ts
  */
-import baseConfig from "./base.config";
+
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import dts from "vite-plugin-dts";
 
 export default defineConfig({
-  ...baseConfig,
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "./src"),
+    },
+  },
   build: {
     outDir: "lib",
     lib: {
-      entry: resolve(__dirname, "../src/index.ts"),
+      entry: resolve(__dirname, "./src/index.ts"),
       name: "GeoConvert",
       fileName: (format) => `index.${format}.js`,
     },
