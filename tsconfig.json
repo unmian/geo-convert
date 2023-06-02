@@ -14,10 +14,7 @@
       "dom",
       "dom.iterable"
     ],
-    "baseUrl": ".",
-    "types": [
-      "vite/client"
-    ]
+    "baseUrl": "."
   },
   "include": [
     "src/**/*.ts",

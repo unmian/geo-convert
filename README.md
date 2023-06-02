@@ -18,13 +18,17 @@ pnpm install @smartcity/geo-convert
 
 ## Licenses
 
-GPL-3.0 License © 2022-PRESENT [Quarter](https://github.com/unmian)
+MIT License © 2023-PRESENT [Quarter](https://github.com/unmian)
 
 ## Releases
 
-### Version 0.1.1 - 2023/03/02
+### Version 0.1.2 - 2023/06/02
 
-- **refactor:** 项目各名称变更
+- **refactor:** License 变更
+
+### Version 0.1.1 - 2023/06/02
+
+- **refactor:** 项目名称变更
 
 ### Version 0.1.0 - 2022/05/10
 
